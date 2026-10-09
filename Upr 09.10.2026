@@ -1,0 +1,182 @@
+
+zad1
+#include <iostream>
+
+int main()
+{
+    std::cout << "Hello, C++" << std::endl;
+    unsigned int apples, pears, bananas;
+    std::cin >> apples >> pears >> bananas;
+    std::cout << "Don't forget to buy " << apples << " apples, " << pears << " pears and " << bananas << " bananas!" << std::endl;
+}
+zad2
+#include <iostream>
+
+int main()
+{
+    double width, height;
+    std::cin >> width >> height;
+    std::cout << "Perimeter = " << 2 * (width + height) << std::endl << "Area = " << width * height << std::endl;
+}
+zad3
+
+
+#include <iostream>
+
+int main()
+{
+    int euro;
+    std::cin >> euro;
+    const double euro_to_dollor_exchange=1.1;
+    const int euro_to_yen_exchange=145;
+    std::cout << "dollars = " <<euro*euro_to_dollor_exchange << std::endl<<"yen = "<<euro*euro_to_yen_exchange<<std::endl;
+}
+
+zad4
+
+#include <iostream>
+
+int main()
+{
+    int first_number,second_number;
+    std::cin >> first_number>>second_number;
+    std::cout<<std::boolalpha<<(second_number%first_number==0);
+}
+
+zad5
+
+
+#include <iostream>
+
+int main()
+{
+   int hund,dec,single;
+   std::cin >> hund>>dec>>single;
+   std::cout << hund*100+dec*10+single << std::endl;
+}
+
+
+zad 6
+
+#include <iostream>
+
+int main()
+{
+   unsigned int three_digit;
+   std::cin >> three_digit;
+   std::cout <<"units = "<< three_digit%10 <<"\ntens= "<< three_digit/10%10 <<"\nhundrets = "<< three_digit/100<<"\nsum = "
+   <<three_digit%10+three_digit/10%10+three_digit/100<< std::endl;
+}
+
+
+zad 7
+
+
+
+#include <iostream>
+
+int main()
+{
+   unsigned int a,b;
+   std::cin >> a>>b;
+   std::cout <<"Prod: "<< a*b <<"\nLast digit: "<<(a*b)%10<<"\nIs odd: "<<std::boolalpha<<(((a*b)%10)%2!=0) <<std::endl;
+}
+
+
+zad 8
+
+
+
+#include <iostream>
+
+int main()
+{
+    unsigned int pass;
+    std::cin>>pass;
+    std::cout << "*****" <<pass%1000<< std::endl;
+}
+
+
+zad9
+
+
+
+#include <iostream>
+
+int main()
+{
+    int seconds;
+    std::cin >> seconds;
+    std::cout << seconds/(3600*24) << " days, "<<(seconds/3600)%24<<" hours, "<<(seconds/60)%60 <<" minutes, "<<seconds%60<<" seconds"<<std::endl;
+}
+ 
+zad10
+
+#include <iostream>
+
+int main()
+{
+    int x1,x2,y1,y2;
+    std::cin>>x1>>x2>>y1>>y2;
+    std::cout<< std::boolalpha<<((x1 >= y1 && x1 <= y2) ||
+         (x2 >= y1 && x2 <= y2) ||
+         (y1 >= x1 && y1 <= x2) ||
+         (y2 >= x1 && y2 <= x2))<<std::endl;
+    
+}
+
+
+zad bonus 1
+
+
+
+#include <iostream>
+
+int main()
+{
+    int palidrome;
+    std::cin >> palidrome;
+    std::cout << std::boolalpha<<((palidrome/1000==palidrome%10)&&(palidrome/10%10==palidrome/100%10)) << std::endl;
+    
+}
+
+
+zad bonus 2
+
+#include <iostream>
+
+int main()
+{
+    int number;
+    std::cin >> number;
+    std::cout << number + (number<0)*-1*number*2 << std::endl;
+    
+}
+
+zad bonus 3
+
+
+
+#include <iostream>
+
+int main()
+{
+    int num1,num2;
+    std::cin >> num1>>num2;
+    std::cout << num1*(num1>=num2) + num2*(num2>num1)<< std::endl;
+    
+}
+
+
+zad bonus 4
+
+#include <iostream>
+
+int main()
+{
+    int km;
+    std::cin>>km;
+    std::cout << (km<=5)*(3+km*2.5)+(km>5)*((8+km*1.5)+((8+km*1.5)>20)*(8+km*1.5)*0.1) << std::endl;
+}
+
+
