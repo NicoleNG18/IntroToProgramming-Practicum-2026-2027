@@ -6,10 +6,9 @@ int main() {
 	long val;
 	cin >> val;
 
-	unsigned long sign = (unsigned long)val >> (sizeof val * 8 - 1);
-	unsigned long signmask = sign * -1;
+	long sign = val % 2 + (val - 1) % 2;
 
-	cout << signmask << endl << ((signmask & -val) | (~signmask & val)) << endl;
+	cout << sign * val << endl;
 
 	return 0;
 }
