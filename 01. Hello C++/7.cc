@@ -5,8 +5,6 @@ int main() {
 	unsigned a, b;
 	cin >> a >> b;
 
-	a %= 100;
-	b %= 100;
 
 	cout << std::boolalpha;
 	cout << "prod = " << a * b << endl;

@@ -6,8 +6,6 @@ int main() {
 	unsigned num;
 	cin >> num;
 
-	num %= 10000;
-
 	unsigned d0 = num % 10;
 	num /= 10;
 	unsigned d1 = num % 10;
