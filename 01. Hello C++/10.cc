@@ -5,6 +5,7 @@ int main() {
 	float a, b, c, d;
 	cin >> a >> b >> c >> d;
 
+	cout << std::boolalpha;
 	cout <<
 		(bool)((c <= a && a <= d) ||
 		(c <= b && b <= d) ||
