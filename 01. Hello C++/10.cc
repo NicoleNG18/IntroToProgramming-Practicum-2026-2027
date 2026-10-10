@@ -7,7 +7,7 @@ int main() {
 
 	cout << std::boolalpha;
 	cout <<
-		(bool)((c <= a && a <= d) ||
+		((c <= a && a <= d) ||
 		(c <= b && b <= d) ||
 		(a <= c && c <= b) ||
 		(a <= d && d <= b))
