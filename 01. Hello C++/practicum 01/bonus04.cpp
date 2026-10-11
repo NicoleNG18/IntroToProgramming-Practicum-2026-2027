@@ -7,7 +7,7 @@ const double tax = 3.00;
 
 int main()
 {
-	int km;
+	double km;
 
 	std::cout << "Km: ";
 	std::cin >> km;
@@ -24,7 +24,7 @@ int main()
 	double checkDis = (price > 20);
 
 
-	double finPrice = price - (nad20 * price * checkDis);
+	double finPrice = price + (nad20 * price * checkDis);
 	std::cout << "Final price: " << finPrice;
 }
 	//Please in such complicated cases give more example answers, thanks!
