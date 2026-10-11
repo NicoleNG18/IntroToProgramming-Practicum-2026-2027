@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cmath>
 
 int main()
 {
@@ -11,5 +10,10 @@ int main()
 	std::cout << "Число 2:";
 	std::cin >> b;
 
-	std::cout << "По-голямо е: " << (a + b + abs(a - b)) / 2;
+	bool check1 = (a>b);
+	bool check2 = (a<=b);
+	
+	int bigger = check1*a + check2*b;
+
+	std::cout << "По-голямо е: " << bigger;
 }
