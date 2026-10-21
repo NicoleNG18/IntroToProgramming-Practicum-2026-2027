@@ -24,10 +24,10 @@ int main()
 
     if(a1<=a2+1 && a2<=b1+1 && b1<=b2+1)
     {
-        std::cout<<"Yes";
+        std::cout<<"YES";
     }
     else
     {
-        std::cout<<"No";
+        std::cout<<"NO";
     }
 }
