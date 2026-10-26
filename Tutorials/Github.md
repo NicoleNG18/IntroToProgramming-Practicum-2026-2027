@@ -73,7 +73,7 @@ To keep your fork in sync with the original repo:
 
 ---
 
+### Video tutorials
 
-How to Run C++ on Microsoft Visual Studio 2022: 
-
-https://www.youtube.com/watch?v=HS4c3kBEWr4
+ - [How to Install Visual Studio 2026 for C++ | C++ Setup Tutorial for Beginners](https://www.youtube.com/watch?v=qeTfUOajsi0)
+ - [How to install Github Desktop on Windows 10/11 [ 2026 Update ] GIT Tutorial | Complete Guide](https://www.youtube.com/watch?v=N6vPzWkPN_Y)
