@@ -1,0 +1,339 @@
+#include <iostream>
+
+int main()
+{
+    //TASK 1:
+    //unsigned n;
+    //std::cin >> n;
+    // 
+    //for (unsigned x = 1; x < n; x++) {
+    //    for (unsigned y = 1; y < n; y++) {
+    //        if (x + y == n) {
+    //            std::cout << "X = " << x << " Y = " << y << "\n";
+    //        }
+    //    }
+    //}
+
+    //TASK 2:
+    //int firstNumber,secondNumber;
+    //std::cin >> firstNumber >> secondNumber;
+    //int smallerNumber = firstNumber;
+    //if (firstNumber > secondNumber) {
+    //    smallerNumber = secondNumber;
+    //}
+    //for (int del = smallerNumber; del >= 1; del --) {
+    //    if (firstNumber % del == 0 && secondNumber % del == 0) {
+    //        std::cout << del << " ";
+    //    }
+    //}
+
+    //TASK 3:
+    //int enteredNumber;
+    //std::cin >> enteredNumber;
+    //int sum = 0;
+
+    //for (int del = enteredNumber / 2; del >= 1; del--) {
+    //    if (enteredNumber % del == 0) 
+    //        sum += del;
+    //}
+
+    //if (sum == enteredNumber) {
+    //    std::cout << "Perfect number";
+    //}
+    //else {
+    //    std::cout << "Not a perfect number";
+    //}
+
+    //TASK 4:
+    //int number;
+    //std::cin >> number;
+
+    //for (int row = 0; row < number; row++) {
+    //    for (int column = 0; column < number; column++) {
+    //        if (row == column) {
+    //            std::cout << "0";
+    //        }
+    //        else if (column > row) {
+    //            std::cout << "+";
+    //        }
+    //        else {
+    //            std::cout << "-";
+    //        }
+    //    }
+    //    std::cout << "\n";
+    //}
+
+    //TASK 5:
+    //int number, position;
+    //std::cin >> number >> position;
+    //int currentDigit = 0;
+    //bool isValid = true;
+
+    //for (int i = 1; i <= position; i++) {
+    //    if (number == 0) {
+    //        isValid = false;
+    //        break;
+    //    }
+    //    currentDigit = number % 10;
+    //    number = number / 10;
+    //}
+
+    //if (isValid) {
+    //    std::cout << currentDigit << "\n";
+    //}
+    //else {
+    //    std::cout << "Don't have digit on index " << position << "\n";
+    //}
+
+    //TASK 6:
+    //long long binaryNumber;
+    //std::cin >> binaryNumber;
+    //int currentDigit, numberValue = 0, currentPowerOfTwo = 1;
+    //long long tempBinaryNumber;
+
+    //while (binaryNumber != 0) {
+    //    tempBinaryNumber = binaryNumber;
+    //    tempBinaryNumber %= 10;
+    //    if (tempBinaryNumber != 1 && tempBinaryNumber != 0) {
+    //        std::cout << "Invalid input";
+    //        break;
+    //    }
+    //    currentDigit = tempBinaryNumber * currentPowerOfTwo;
+    //    numberValue = numberValue + currentDigit;
+    //    binaryNumber /= 10;
+    //    currentPowerOfTwo *= 2;
+    //}
+    //if (numberValue > 0) {
+    //    std::cout << numberValue;
+    //}
+    
+
+    //TASK 7:
+    //int number;
+    //std::cin >> number;
+    //int squaredNumber = number * number;
+    //int tempNumber = number;
+    //bool isAutomorphic = true;
+    //
+    //while (tempNumber > 0) {
+    //    if (squaredNumber % 10 != tempNumber % 10) {
+    //        isAutomorphic = false;
+    //        break;
+    //    }
+    //        squaredNumber = squaredNumber / 10;
+    //        tempNumber = tempNumber / 10;
+    //    
+    //}
+    //if (isAutomorphic == true) {
+    //    std::cout << "Automorphic";
+    //}
+    //else {
+    //    std::cout << "Not automorphic";
+    //}
+
+    //TASK 8
+    //int number = 0;
+    //std::cin >> number;
+    //int maxValue = number;
+
+    //if (number <= 0) {
+    //    std::cout << "Invalid output";
+    //}
+    //else {
+    //    int steps = 0;
+    //    std::cout << "Sequence: ";
+
+    //    while (number > 1) {
+    //        std::cout << number << " ";
+
+    //        if (number % 2 == 0) {
+    //            number = number / 2;
+    //        }
+    //        else {
+    //            number = number * 3 + 1;
+    //        }
+    //        if (number > maxValue) {
+    //            maxValue = number;
+    //        }
+    //        steps++;
+    //    }
+    //    std::cout << "\nSteps: " << steps
+    //        << "\nMax value: " << maxValue;
+    //}
+
+    //TASK 9:
+    //int numerator, denominator;
+    //std::cin >> numerator >> denominator;
+
+    //bool isNegative = false;
+    //if ((numerator < 0 && denominator > 0) || (numerator > 0 && denominator < 0)) {
+    //    isNegative = true;
+    //}
+
+    //int a = numerator;
+    //if (a < 0) {
+    //    a = -a;
+    //}
+
+    //int b = denominator;
+    //if (b < 0) {
+    //    b = -b;
+    //}
+    //
+    //int tempA = a, tempB = b;
+    //while (tempB != 0) {
+    //    int remainder = tempA % tempB;
+    //    tempA = tempB;
+    //    tempB = remainder;
+    //}
+
+    //int gcd = tempA;
+    //int simplifiedNumerator = a / gcd;
+    //int simplifiedDenominator = b / gcd;
+
+    //if (isNegative) {
+    //    std::cout << "-" << simplifiedNumerator << "/" << simplifiedDenominator;
+    //}
+    //else {
+    //    std::cout << simplifiedNumerator << "/" << simplifiedDenominator;
+    //}
+
+    //TASK 10:
+    //long long number;
+    //long long tempNumber;
+    //std::cin >> number;
+
+    //int count0 = 0, count1 = 0, count2 = 0, count3 = 0, count4 = 0,
+    //    count5 = 0, count6 = 0, count7 = 0, count8 = 0, count9 = 0;
+
+    //while (number > 0) {
+    //    tempNumber = number;
+    //    tempNumber %= 10;
+    //    switch (tempNumber) {
+    //    case 0: count0++; break;
+    //    case 1: count1++; break;
+    //    case 2: count2++; break;
+    //    case 3: count3++; break;
+    //    case 4: count4++; break;
+    //    case 5: count5++; break;
+    //    case 6: count6++; break;
+    //    case 7: count7++; break;
+    //    case 8: count8++; break;
+    //    case 9: count9++; break;
+    //    }
+    //    number /= 10;
+    //}
+
+    //int mostFrequentDigit, maxCount = 0;
+
+    //if (count9 > maxCount) {
+    //    maxCount = 9;
+    //    mostFrequentDigit = 9;
+    //}
+    //if (count8 > maxCount) {
+    //    maxCount = count8;
+    //    mostFrequentDigit = 8;
+    //}
+    //if (count7 > maxCount) {
+    //    maxCount = count7;
+    //    mostFrequentDigit = 7;
+    //}
+    //if (count6 > maxCount) {
+    //    maxCount = count6;
+    //    mostFrequentDigit = 6;
+    //}
+    //if (count5 > maxCount) {
+    //    maxCount = count5;
+    //    mostFrequentDigit = 5;
+    //}
+    //if (count4 > maxCount) {
+    //    maxCount = count4;
+    //    mostFrequentDigit = 4;
+    //}
+    //if (count3 > maxCount) {
+    //    maxCount = count3;
+    //    mostFrequentDigit = 3;
+    //}
+    //if (count2 > maxCount) {
+    //    maxCount = count2;
+    //    mostFrequentDigit = 2;
+    //}
+    //if (count1 > maxCount) {
+    //    maxCount = count1;
+    //    mostFrequentDigit = 1;
+    //}
+    //if (count0 > maxCount) {
+    //    maxCount = count0;
+    //    mostFrequentDigit = 0;
+    //}
+
+    //std::cout << mostFrequentDigit;
+
+
+    //BONUS TASK 1:
+    //int number;
+    //std::cout << "n = ";
+    //std::cin >> number;
+    //std::cout << "Enter " << number << " numbers: \n";
+
+    //if (number < 2) {
+    //    std::cout << "Invalid input";
+    //    return 0;
+    //}
+
+    //int maxValue = 0, secondMaxValue = 0;
+    //int tempNum;
+
+    //for (int i = 1; i <= number; i++) {
+    //    std::cin >> tempNum;
+    //    if (tempNum < 0) {
+    //        std::cout << "Invalid input";
+    //        break;
+    //    }
+
+    //    if (secondMaxValue < tempNum && tempNum < maxValue) {
+    //        secondMaxValue = tempNum;
+    //    }
+    //    if (maxValue < tempNum) {
+    //        maxValue = tempNum;
+    //    }
+    //}
+
+    //if (tempNum > -1) {
+    //    std::cout << "Your two largest numbers are: " << maxValue << " and " << secondMaxValue;
+    //}
+
+    //BONUS TASK 2:
+    //int number;
+    //std::cout << "N = ";
+    //std::cin >> number;
+
+    //if (number <= 0) {
+    //    std::cout << "Invalid input";
+    //    return 0;
+    //}
+
+    //int sumOfAllNumbers = 0;
+
+    //for (int i = 1; i <= number; i++) {
+    //    sumOfAllNumbers += i;
+    //}
+
+    //int tempNum, sumOfEnteredNumbers = 0;
+    //
+    //for (int i = 1; i < number; i++) {
+    //    std::cin >> tempNum;
+
+    //    if (tempNum < 1) {
+    //        std::cout << "Invalid input";
+    //        break;
+    //    }
+
+    //    sumOfEnteredNumbers += tempNum;
+    //}
+    //
+    //int missingNum = sumOfAllNumbers - sumOfEnteredNumbers;
+
+    //std::cout << "Your missing number is: " << missingNum;
+
+}
