@@ -1,11 +1,10 @@
 #include <iostream>
 #include <cmath>
 
-double getABSide(int xa, int ya, int xb, int yb)
+double getP(int xa, int ya, int xb, int yb, int xc, int yc)
 {
-    return sqrt((xb-xa)*(xb-xa) +(yb-ya)*(yb-ya));
+    return (sqrt((xb-xa)*(xb-xa) +(yb-ya)*(yb-ya)) + sqrt((xc-xb)*(xc-xb) +(yc-yb)*(yc-yb)) + sqrt((xc-xa)*(xc-xa) +(yc-ya)*(yc-ya) ));
 }
-
 
 int main() 
 {
@@ -26,9 +25,5 @@ int main()
 
     int f;
     std::cin>>f;
-
-
-    std::cout<<getABSide(a, b, c, d) + getABSide(c, d, e, f) + getABSide(a, b, e, f);
-
-
+    std::cout<<getP(a, b, c, d, e, f);
 }
