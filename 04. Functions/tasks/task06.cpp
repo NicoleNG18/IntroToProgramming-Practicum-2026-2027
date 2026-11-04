@@ -7,40 +7,40 @@ bool isDigit(char digit)
     return digit>='0' && digit<='9';
 }
 
-bool isUpper (char digit)
+bool isUpper (char letter)
 {
-    return digit >='A' && digit <= 'Z';
+    return letter >='A' && letter <= 'Z';
 }
 
-bool isLower (char digit)
+bool isLower (char letter)
 {
-    return digit >='a' && digit <= 'z';
+    return letter >='a' && letter <= 'z';
 }
 
-bool isAlpha (char digit)
+bool isAlpha (char letter)
 {
-    return isLower(digit) || isUpper(digit);
+    return isLower(letter) || isUpper(letter);
 }
-bool isAlnum (char digit)
+bool isAlnum (char digitOrLetter)
 {
-    return isAlpha(digit) || isDigit(digit);
+    return isAlpha(digitOrLetter) || isDigit(digitOrLetter);
 }
-char capitalize (char digit)
+char capitalize (char letter)
 {
-    if(isLower(digit))
+    if(isLower(letter))
     {
-        return digit - ('a' - 'A');
+        return letter - ('a' - 'A');
     }
     else
-    return digit;
+    return letter;
 }
-char makeLower (char digit)
+char makeLower (char letter)
 {
-    if(isUpper(digit))
+    if(isUpper(letter))
     {
-        return digit + ('a' - 'A');
+        return letter + ('a' - 'A');
     }
-    return  digit;
+    return  letter;
 }
 int parseInt (char digit)
 {
