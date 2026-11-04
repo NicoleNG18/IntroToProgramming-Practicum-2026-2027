@@ -68,22 +68,15 @@ char toChar(int digit)
 
 double myLog(double x, double base)
 {
-    do
+    if( (isDigit(x)) && isdigit(base));
     {
-        std::cin>>x;
+        int count = 0;
+        for (int i = base; i <= x; i = i * base) 
+        {
+            count++;
+        }
+        return count;
     }
-    while (isDigit(x));
-    do
-    {
-        std::cin>>base;
-    }
-    while (isDigit(base));
-    int count = 0;
-    for (int i = base; i <= x; i = i * base) 
-    {
-        count++;
-    }
-    return count;
 }
 int myPow(double x, int power)
 {
