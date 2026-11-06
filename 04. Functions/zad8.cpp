@@ -1,0 +1,24 @@
+#include<iostream>
+
+long long mixNums(int a,int b){
+    long long result=0;
+    while(a>0||b>0){
+        if(a>0){
+            result*=10;
+            result+=(a%10);
+            a/=10;
+        }
+        if(b>0){
+            result*=10;
+            result+=(b%10);
+            b/=10;
+        }
+    }
+    return result;
+}
+
+int main(){
+    int a,b;
+    std::cin>>a>>b;
+    std::cout<<mixNums(a,b)<<"\n";
+}
