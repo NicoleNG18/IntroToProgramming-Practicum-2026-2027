@@ -12,19 +12,6 @@ void getMatrix(double matrix[][MAX_ROWS], unsigned rows, unsigned cols) {
     }
 }
 
-void getSpiral (double matrixSpiral[][MAX_ROWS], double matrix1[][MAX_ROWS], unsigned rows, unsigned cols){
-    for (unsigned i = 0; i < rows; i++) {
-        for (unsigned j = 0; j < cols; j++){
-            if(i != 0)
-            {
-                matrixSpiral[i][j] = matrix1[j][i];
-            }
-            else{
-                matrixSpiral[i][j] = matrix1[i][j];
-            }
-        }
-    }
-}
 
 void printMatrix(const double matrix[][MAX_ROWS], unsigned rows, unsigned cols) {
     int top = 0;
@@ -32,16 +19,16 @@ void printMatrix(const double matrix[][MAX_ROWS], unsigned rows, unsigned cols) 
     int left = 0;
     int right = cols - 1;
     while (top <= bottom && left <= right) {
-        for (unsigned i = left; i <= right; i++) {
+        for (int i = left; i <= right; i++) {
             std::cout << matrix[top][i] << " ";
         }
         top++;
-        for (unsigned i = top; i <= bottom; i++) {
+        for (int i = top; i <= bottom; i++) {
             std::cout << matrix[i][right] << " ";
         }
         right--;
         if (top <= bottom) {
-            for (unsigned i = right; i >= left; i--) {
+            for (int i = right; i >= left; i--) {
                 std::cout << matrix[bottom][i] << " ";
             }
             bottom--;
@@ -66,6 +53,5 @@ int main() {
     std::cout << "\nEnter matrix:";
     getMatrix(matrix1, rows, cols);
     std::cout<<"\nMatrix:\n";
-    double matrixCopy[MAX_ROWS][MAX_ROWS];
     printMatrix(matrix1, rows, cols);
 }
