@@ -1,25 +1,11 @@
 #include<iostream>
 
-int main()
-{
-    unsigned int month;
-    std::cin>>month;
-    if(month==1 || month==3 || month==5 || month==10 ||month==7 || month==8 || month==12)
-    {
-        std::cout<<"31\n";
-    }
-    else if (month==2)
-    {
-        unsigned int year;
-        std::cout<<"Year: ";
-        std::cin>>year;
-        std::cout<<(((year%4==0 && year%100!=0)||(year%400==0))?"29":"28")<<std::endl;
-
-    }
-    else
-    {
-        std::cout<<"30\n";
-    }
+bool areCollinear(int x1,int y1,int x2,int y2,int x3,int y3){
+    return (x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2)==0);
 }
 
-
+int main(){
+    int x1,y1,x2,y2,x3,y3;
+    std::cin>>x1>>y1>>x2>>y2>>x3>>y3;
+    std::cout<<(areCollinear(x1,y1,x2,y2,x3,y3)?"true":"false")<<"\n";
+}

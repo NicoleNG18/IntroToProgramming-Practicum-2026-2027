@@ -1,20 +1,18 @@
 #include<iostream>
+#include<cmath>
 
-int main(){
-    int x,y;
-    std::cin>>x>>y;
-    if(x==0 || y==0){
-        std::cout<<"On axis \n";
-    }else if(x>0 && y>0){
-        std::cout<<"First \n";
-    }else if(x<0 && y>0){
-        std::cout<<"Second \n";
-    }else if(x<0 && y<0){
-        std::cout<<"Third \n";
-    }else{
-        std::cout<<"Forth \n";
-    }
+double distance(int x1,int y1,int x2,int y2){
+    return sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
 }
 
+double perimeter(int x1,int y1,int x2,int y2,int x3,int y3){
+    return distance(x1,y1,x2,y2)+distance(x2,y2,x3,y3)+distance(x3,y3,x1,y1);
+}
 
+int main(){
+    int x1,y1,x2,y2,x3,y3;
+    std::cin>>x1>>y1>>x2>>y2>>x3>>y3;
+    std::cout<<perimeter(x1,y1,x2,y2,x3,y3);<<"\n";
 
+    ///Не знам как се прави без използване на sqrt, не можах да задам точността на десетичната запетая без cout.percison
+}
