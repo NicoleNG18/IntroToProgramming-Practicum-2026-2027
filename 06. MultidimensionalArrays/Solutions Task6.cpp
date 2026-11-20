@@ -1,12 +1,11 @@
-// Task 6.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// Tasks from seminar 6 - Kosta Politov.cpp : This file contains the 'main' function. Program execution begins and ends there.
 
 #include <iostream>
 
 //TASK 1:
 const int MAX_SIZE = 128;
 
-void getMatrix(int arr[][MAX_SIZE], int size){
+void getMatrix(int arr[][MAX_SIZE], int size) {
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size; j++) {
 			std::cin >> arr[i][j];
@@ -95,15 +94,13 @@ bool isMagicSquare(const int arr[][MAX_SIZE], int size) {
 			return false;
 		}
 	}
-	
+
 	return true;
 }
 
 //TASK 4:
-int getSizeOf(const std::string& message) {
+int getSizeOf() {
 	int sizeOfArray;
-
-	std::cout << message;
 
 	do {
 		std::cin >> sizeOfArray;
@@ -144,6 +141,9 @@ void printRectangleMatrix(int arr[][MAX_SIZE], int sizeOfRows, int sizeOfCols) {
 		std::cout << "\n";
 	}
 }
+
+//TASK 5:
+
 
 int main()
 {
@@ -226,28 +226,43 @@ int main()
 
 
 	//TASK 4:
-	int sizeOfRows1 = getSizeOf("Enter rows of the first matrix:\n"), 
-		sizeOfCols1 = getSizeOf("Enter columns of the first matrix:\n");
+	//int sizeOfRows1 = getSizeOf(),
+	//	sizeOfCols1 = getSizeOf();
 
-	int sizeOfRows2 = getSizeOf("Enter rows of the second matrix:\n"),
-		sizeOfCols2 = getSizeOf("Enter columns of the second matrix:\n");
+	//int sizeOfRows2 = getSizeOf(),
+	//	sizeOfCols2 = getSizeOf();
 
-	if (sizeOfCols1 != sizeOfRows2) {
-		std::cout << "Impossible multiplication!\n";
-		return 1;
-	}
+	//if (sizeOfCols1 != sizeOfRows2) {
+	//	std::cout << "Impossible multiplication!\n";
+	//	return 1;
+	//}
 
-	int matrix1[MAX_SIZE][MAX_SIZE], matrix2[MAX_SIZE][MAX_SIZE];
+	//int matrix1[MAX_SIZE][MAX_SIZE], matrix2[MAX_SIZE][MAX_SIZE];
 
-	std::cout << "Enter elements of the first matrix:\n";
-	getRectangleMatrix(matrix1, sizeOfRows1, sizeOfCols1);
+	//std::cout << "Enter elements of the first matrix:\n";
+	//getRectangleMatrix(matrix1, sizeOfRows1, sizeOfCols1);
 
-	std::cout << "Enter elements of the second matrix:\n";
-	getRectangleMatrix(matrix2, sizeOfRows2, sizeOfCols2);
+	//std::cout << "Enter elements of the second matrix:\n";
+	//getRectangleMatrix(matrix2, sizeOfRows2, sizeOfCols2);
 
-	int multipliedMatrix[MAX_SIZE][MAX_SIZE];
+	//int multipliedMatrix[MAX_SIZE][MAX_SIZE];
 
-	matrixMultiplier(matrix1, matrix2, multipliedMatrix, sizeOfRows1, sizeOfRows2, sizeOfCols2);
+	//matrixMultiplier(matrix1, matrix2, multipliedMatrix, sizeOfRows1, sizeOfRows2, sizeOfCols2);
 
-	printRectangleMatrix(multipliedMatrix, sizeOfRows1, sizeOfCols2);
+	//printRectangleMatrix(multipliedMatrix, sizeOfRows1, sizeOfCols2);
+
+
+	//TASK 5:
+	std::cout << "Enter number of rows:\n";
+	int sizeOfRows = getSizeOf();
+
+	std::cout << "Enter number of columns:\n";
+	int sizeOfCols = getSizeOf();
+
+	int matrix[MAX_SIZE][MAX_SIZE];
+
+	std::cout << "Enter elements of the matrix:\n";
+	getRectangleMatrix(matrix, sizeOfRows, sizeOfCols);
+
+	
 }
