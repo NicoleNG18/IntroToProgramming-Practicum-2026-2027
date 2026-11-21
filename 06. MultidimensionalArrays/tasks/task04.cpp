@@ -11,15 +11,17 @@ void getMatrix(double matrix[][MAX_ROWS], unsigned rows, unsigned cols) {
         }
     }
 }
+void multiply (double matrixMultiplication[][MAX_ROWS], double matrix1[][MAX_ROWS], double matrix2[][MAX_ROWS], unsigned i, unsigned j, unsigned cols){
+    for (unsigned k = 0; k < cols; k++) {
+        matrixMultiplication[i][j] = matrixMultiplication[i][j] + matrix1[i][k]*matrix2[k][j]; 
+    }
+}
 
 void getMultiplication(double matrixMultiplication[][MAX_ROWS], double matrix1[][MAX_ROWS], double matrix2[][MAX_ROWS], unsigned cols, unsigned cols2){
     for (unsigned i = 0; i < cols; i++) {
         for (unsigned j = 0; j < cols2; j++) {
             matrixMultiplication[i][j] = 0;
-            for (unsigned k = 0; k < cols; k++) {
-
-            matrixMultiplication[i][j] = matrixMultiplication[i][j] + matrix1[i][k]*matrix2[k][j]; 
-            }
+            multiply(matrixMultiplication, matrix1, matrix2, i, j, cols);
         }
     }
 }
