@@ -2,7 +2,7 @@
 
 const size_t MAXARRAYSIZE = 128;
 
-void getArray (double arr[], size_t size)
+void getArray (int arr[], size_t size)
 {
     for (unsigned i = 0; i< size; i++  )
     {
@@ -10,21 +10,24 @@ void getArray (double arr[], size_t size)
     }
 }
 
-unsigned getIndex(double a[], size_t size)
+unsigned getIndex(const int arr[], size_t size, int element)
 {
-    double x;
-    std::cout<<"x = ";
-    std::cin>>x;
-    unsigned cnt = 0;
-    for (unsigned i = 0; i< size; i++)
+    int start = 0;
+    int end = size;
+    while (start < end)
     {
-        if(x > a[i])
+        int mid = start + (end - start) / 2;
+        if (element <= arr[mid])
         {
-            cnt++;
+            end = mid;
         }
-    }
-    return cnt;
+        else 
+        {
+            start = mid + 1;
+        }
 
+    }
+    return start;
 } 
 
 int main()
@@ -35,7 +38,10 @@ int main()
         std::cin>>n;
     }
     while(n<1 || n>MAXARRAYSIZE);
-    double arr1[MAXARRAYSIZE];
+    int arr1[MAXARRAYSIZE];
     getArray(arr1, n);
-    std::cout<<getIndex(arr1, n);
+    double x;
+    std::cout<<"x = ";
+    std::cin>>x;
+    std::cout<<getIndex(arr1, n, x);
 }
