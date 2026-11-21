@@ -10,7 +10,7 @@ void getArray (unsigned arr[], size_t size)
     }
 }
 
-bool isZigZag (unsigned a[], unsigned size)
+bool isZigZag (const unsigned a[], unsigned size)
 {
     for (unsigned i = 1; i< size-1; i++  )
     {   
